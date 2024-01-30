@@ -1,0 +1,86 @@
+/* Global styling */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000; /* Set background color to black */
+}
+
+
+h1, button {
+    text-transform: uppercase;
+    /* Gradient background effect */
+    background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff; /* Set text color to white */
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite; /* Text clip animation */
+    display: inline-block;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* Animation keyframes for text clip effect */
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Game container styling */
+.game-container {
+    text-align: center;
+}
+
+/* Styling for the tic-tac-toe board */
+.tic-tac-toe-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin: 20px auto;
+}
+
+/* Styling for individual cells in the board */
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: rgb(0, 255, 247); /* Set background color */
+    color: #050500; /* Set text color */
+}
+
+/* Hover effect for cells */
+.cell:hover {
+    background-color: #0080ff; /* Set background color on hover */
+}
+
+/* Styling for game messages */
+.message {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #fff; /* Set text color to white */
+}
+
+/* Styling for the reset button */
+.reset-button {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #3498db; /* Set background color */
+    color: #fff; /* Set text color to white */
+    border: none;
+    cursor: pointer;
+}
